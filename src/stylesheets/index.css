@@ -21,6 +21,8 @@
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
   --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
 
   /* text sizing */
   --text-xs: 0.75rem;
@@ -50,6 +52,7 @@
     color: hsl(var(--neutral-clr-700));
     background-color: hsl(var(--neutral-clr-50));
     font-family: "Montserrat", sans-serif, system-ui;
+    font-weight: 700;
     line-height: 1.5;
   }
 
@@ -68,4 +71,26 @@
     font-size: 1rem;
     line-height: 1;
   }
+}
+
+header {
+  padding: var(--spacing-xl);
+  margin-block: 0 var(--spacing-xl);
+  text-align: center;
+}
+
+h1 {
+  margin-block-end: var(--spacing-lg);
+  color: hsl(var(--neutral-clr-650));
+}
+
+.switch-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.switch-area span {
+  color: hsl(var(--neutral-clr-650) / 0.7);
 }
