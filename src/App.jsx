@@ -1,5 +1,6 @@
 import PricingCard from "./components/PricingCard.jsx";
 import ToggleSwitch from "./components/ToggleSwitch.jsx";
+import "./stylesheets/index.css";
 
 export default function App() {
   return (
