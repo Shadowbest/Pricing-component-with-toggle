@@ -19,7 +19,7 @@ export default function PricingCard() {
         </li>
       </ul>
 
-      <a href="#" className="btn">Learn More</a>
+      <a href="#" className="btn text-uppercase bg-gradient">Learn More</a>
     </article>
   );
 }

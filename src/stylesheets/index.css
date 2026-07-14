@@ -79,6 +79,30 @@
   }
 }
 
+@layer utilities {
+  .btn {
+    display: block;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: var(--text-sm);
+    letter-spacing: 3px;
+    cursor: pointer;
+  }
+
+  .text-uppercase {
+    text-transform: uppercase;
+  }
+
+  .bg-gradient {
+    background-image: linear-gradient(
+      to right,
+      hsl(var(--accent-clr-300)),
+      hsl(var(--accent-clr-700))
+    );
+  }
+}
+
 header {
   padding: var(--spacing-xl);
   margin-block: 0 var(--spacing-xl);
