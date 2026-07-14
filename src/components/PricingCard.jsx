@@ -9,13 +9,13 @@ export default function PricingCard() {
 
       <ul className="card-features">
         <li>
-          <strong>500 GB Storage</strong>
+          500 GB Storage
         </li>
         <li>
-          <strong>2 Users Allowed</strong>
+          2 Users Allowed
         </li>
         <li>
-          <strong>Send up to 3 GB</strong>
+          Send up to 3 GB
         </li>
       </ul>
 
