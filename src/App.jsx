@@ -1,5 +1,6 @@
 import PricingCard from "./components/PricingCard.jsx";
 import ToggleSwitch from "./components/ToggleSwitch.jsx";
+import data from "./data.json";
 import "./stylesheets/index.css";
 
 export default function App() {
@@ -16,9 +17,14 @@ export default function App() {
 
       <main>
         <div className="cards-wrapper">
-          <PricingCard />
-          <PricingCard />
-          <PricingCard />
+          {data.map(plan => (
+            <PricingCard
+              key={plan.id}
+              tier={plan.tier}
+              tierPrice={plan.price.annual}
+              features={plan.features}
+            />
+          ))}
         </div>
       </main>
     </>
