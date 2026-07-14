@@ -94,7 +94,13 @@
     text-transform: uppercase;
   }
 
+  .bg-light {
+    color: hsl(var(--accent-clr-700));
+    background-color: white;
+  }
+
   .bg-gradient {
+    color: white;
     background-image: linear-gradient(
       to right,
       hsl(var(--accent-clr-300)),
@@ -144,6 +150,10 @@ h1 {
   box-shadow: 1px 5px 17px -4px hsl(var(--accent-clr-700) / 0.3);
 }
 
+.pricing-card.bg-gradient .price-tier { 
+  color: inherit;
+}
+
 .pricing-card .price-tier {
   color: hsl(var(--neutral-clr-650));
   font-size: var(--text-lg);
@@ -171,4 +181,15 @@ h1 {
   li + li {
     border-block-start: none;
   }
+}
+
+.pricing-card.bg-gradient .card-features {
+  li {
+    color: inherit;
+    border-color: white;
+  }
+}
+
+.pricing-card .btn {
+  margin-block: var(--spacing-md) 0;
 }
