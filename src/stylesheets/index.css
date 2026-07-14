@@ -100,3 +100,51 @@ h1 {
 .switch-area span {
   color: hsl(var(--neutral-clr-650) / 0.7);
 }
+
+/* CARDS */
+.cards-wrapper {
+  display: grid;
+  gap: var(--spacing-lg);
+  margin-inline: var(--spacing-lg);
+  margin-block: 0 var(--spacing-2xl);
+}
+
+.pricing-card {
+  --radius: var(--spacing-md);
+  display: grid;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius);
+  background-color: white;
+  text-align: center;
+  box-shadow: 1px 5px 17px -4px hsl(var(--accent-clr-700) / 0.3);
+}
+
+.pricing-card .price-tier {
+  color: hsl(var(--neutral-clr-650));
+  font-size: var(--text-lg);
+}
+
+.pricing-card .price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: 2.5rem;
+
+  span {
+    font-size: 4rem;
+  }
+}
+
+.card-features {
+  li {
+    padding-block: var(--spacing-md);
+    border-block: 1px solid hsl(var(--neutral-clr-650) / 0.4);
+    color: hsl(var(--neutral-clr-650));
+  }
+
+  li + li {
+    border-block-start: none;
+  }
+}
