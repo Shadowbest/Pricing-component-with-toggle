@@ -1,10 +1,11 @@
-export default function ToggleSwitch() {
+export default function ToggleSwitch({ toggled, onToggle }) {
   return (
     <button
       className="toggle-switch"
       role="switch"
-      aria-checked="false"
-      aria-label="Toggle billing, currently annual"
+      aria-checked={toggled}
+      aria-label={ !toggled ? "Toggle billing to monthly, currently annual" : "Toggle billing to annual, currently monthly"}
+      onClick={onToggle}
     >
       <span className="thumb" aria-hidden="true"></span>
     </button>
