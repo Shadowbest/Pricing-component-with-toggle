@@ -1,6 +1,6 @@
 export default function PricingCard({ tier, tierPrice, features}) {
   const cardClasses = "professional" === tier.toLowerCase()
-    ? "pricing-card bg-gradient"
+    ? "pricing-card bg-gradient-card"
     : "pricing-card";
   const buttonClasses = "professional" === tier.toLowerCase()
     ? "btn text-uppercase bg-light"
