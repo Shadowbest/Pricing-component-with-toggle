@@ -128,6 +128,7 @@
     border: none;
     border-radius: 1rem;
     position: relative;
+    cursor: pointer;
 
     .thumb {
       --size: calc(var(--spacing-sm) * 3);
@@ -176,12 +177,13 @@ h1 {
 .cards-wrapper {
   display: grid;
   gap: var(--spacing-lg);
+  max-inline-size: 1100px;
   margin-inline: var(--spacing-lg);
   margin-block: 0 var(--spacing-2xl);
 }
 
 .pricing-card {
-  --radius: var(--spacing-md);
+  --radius: var(--spacing-sm);
   display: grid;
   gap: var(--spacing-md);
   padding: var(--spacing-lg);
@@ -233,4 +235,30 @@ h1 {
 
 .pricing-card .btn {
   margin-block: var(--spacing-md) 0;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (width >= 780px) {
+  body {
+    background-image: url("/images/bg-top.svg"), url("/images/bg-bottom.svg");
+    background-position: 85% 25%, 10% bottom;
+  }
+
+  .cards-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: baseline;
+    gap: 0;
+    margin-inline: auto;
+  }
+
+  .pricing-card:nth-child(2) .price-tier {
+    margin-block-start: var(--spacing-lg);
+  }
+
+  .pricing-card:nth-child(2) .btn {
+    margin-block-end: var(--spacing-lg);
+  }
+
+  /* TODO: implement hover and focus states */
 }
