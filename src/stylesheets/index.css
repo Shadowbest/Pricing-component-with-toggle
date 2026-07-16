@@ -128,6 +128,11 @@
     border: none;
     border-radius: 1rem;
     position: relative;
+    background-image: linear-gradient(
+      to right,
+      hsl(var(--accent-clr-300)),
+      hsl(var(--accent-clr-700))
+    );
     cursor: pointer;
 
     .thumb {
@@ -260,5 +265,38 @@ h1 {
     margin-block-end: var(--spacing-lg);
   }
 
-  /* TODO: implement hover and focus states */
+  @layer utilities {
+    .btn:focus-visible {
+      outline-offset: 4px;
+    }
+
+    .bg-light {
+      border: 1px solid white;
+    }
+
+    .bg-light:hover {
+      background-color: transparent;
+      color: white;
+    }
+
+    .bg-gradient {
+      border: 1px solid hsl(var(--accent-clr-300));
+    }
+
+    .bg-gradient:hover {
+      color: hsl(var(--accent-clr-700));
+      background-image: none;
+    }
+  }
+
+  @layer components {
+    .toggle-switch:where([role="switch"]):hover {
+      opacity: 0.5;
+    }
+
+    .toggle-switch:where([role="switch"]):focus-visible {
+      outline-color: hsl(var(--accent-clr-700));
+      outline-offset: 6px;
+    }
+  }
 }

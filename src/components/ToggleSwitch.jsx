@@ -1,7 +1,7 @@
 export default function ToggleSwitch() {
   return (
     <button
-      className="toggle-switch bg-gradient"
+      className="toggle-switch"
       role="switch"
       aria-checked="false"
       aria-label="Toggle billing, currently annual"
