@@ -33,7 +33,7 @@
   --text-2xl: 2rem;
 }
 
-@layer defaults, utilities;
+@layer defaults, utilities, components;
 
 @layer defaults {
 
@@ -115,6 +115,35 @@
       hsl(var(--accent-clr-300)),
       hsl(var(--accent-clr-700))
     );
+  }
+}
+
+@layer components {
+  .toggle-switch:where([role="switch"]) {
+    inline-size: 55px;
+    block-size: 32px;
+    border: none;
+    border-radius: 1rem;
+    position: relative;
+
+    .thumb {
+      --size: calc(var(--spacing-sm) * 3);
+      display: block;
+      inline-size: var(--size);
+      block-size: var(--size);
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateX(0.25rem) translateY(-50%);
+      background-color: white;
+    }
+  }
+
+  .toggle-switch:where([aria-checked="true"]) {
+    .thumb {
+      transform: translateX(1.7rem) translateY(-50%);
+    }
   }
 }
 

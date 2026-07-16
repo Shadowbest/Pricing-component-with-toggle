@@ -1,11 +1,12 @@
 export default function ToggleSwitch() {
   return (
     <button
-      className="toggle-switch"
+      className="toggle-switch bg-gradient"
       role="switch"
-      aria-pressed="false"
+      aria-checked="false"
+      aria-label="Toggle billing, currently annual"
     >
-        Toggle Switch
+      <span className="thumb" aria-hidden="true"></span>
     </button>
   );
 }
