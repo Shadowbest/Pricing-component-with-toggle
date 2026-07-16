@@ -107,6 +107,15 @@
       hsl(var(--accent-clr-700))
     );
   }
+
+  .bg-gradient-card {
+    color: white;
+    background-image: linear-gradient(
+      to bottom,
+      hsl(var(--accent-clr-300)),
+      hsl(var(--accent-clr-700))
+    );
+  }
 }
 
 header {
@@ -150,7 +159,7 @@ h1 {
   box-shadow: 1px 5px 17px -4px hsl(var(--accent-clr-700) / 0.3);
 }
 
-.pricing-card.bg-gradient .price-tier { 
+.pricing-card.bg-gradient-card .price-tier { 
   color: inherit;
 }
 
@@ -183,10 +192,10 @@ h1 {
   }
 }
 
-.pricing-card.bg-gradient .card-features {
+.pricing-card.bg-gradient-card .card-features {
   li {
     color: inherit;
-    border-color: white;
+    border-color: hsl(var(--neutral-clr-50) / 0.4);
   }
 }
 

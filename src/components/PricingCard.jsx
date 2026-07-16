@@ -1,6 +1,13 @@
 export default function PricingCard({ tier, tierPrice, features}) {
+  const cardClasses = "professional" === tier.toLowerCase()
+    ? "pricing-card bg-gradient"
+    : "pricing-card";
+  const buttonClasses = "professional" === tier.toLowerCase()
+    ? "btn text-uppercase bg-light"
+    : "btn text-uppercase bg-gradient"
+
   return (
-    <article className="pricing-card">
+    <article className={cardClasses}>
       <h2 className="price-tier">{tier}</h2>
 
       <p className="price">
@@ -15,7 +22,7 @@ export default function PricingCard({ tier, tierPrice, features}) {
         }
       </ul>
 
-      <a href="#" className="btn text-uppercase bg-gradient">Learn More</a>
+      <a href="#" className={buttonClasses}>Learn More</a>
     </article>
   );
 }
