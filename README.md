@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - [Solution](https://www.frontendmentor.io/solutions/pricing-card-component-with-react-fnfdiXwoyV)
-- [Live Solutin Site](https://pricing-component-with-switch.netlify.app/)
+- [Live Solution Site](https://pricing-component-with-switch.netlify.app/)
 
 ## My process
 
